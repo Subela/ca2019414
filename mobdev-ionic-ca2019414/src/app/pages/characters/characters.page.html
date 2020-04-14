@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let character of (charcaters | async)" (click)="openDetails(character)">
+    <ion-item button det ail lines="inset" *ngFor="let character of charcaters | async" (click)="openDetails(character)">
       {{ character.title }}
     </ion-item>
   </ion-list>
