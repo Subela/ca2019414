@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>charactersDetails</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/characters">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ character?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="character">
+  <ion-card>
+    <ion-card-content>
+      <h3><strong>Synopsis</strong></h3>
+      {{ character.opening_crawl }}
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <h3><strong>Director</strong></h3>
+        {{ character.director }}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <h3><strong>Producer</strong></h3>
+        {{ character.producer }}
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-content>
+        <h3><strong>Release date</strong></h3>
+        {{ character.release_date }}
+      </ion-card-content>
+    </ion-card>
 
 </ion-content>
